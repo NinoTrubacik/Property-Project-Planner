@@ -1,0 +1,684 @@
+{
+  "_meta": {
+    "vintage": "2026-H1 national averages",
+    "vintage_year": 2026,
+    "annual_escalation": 0.035,
+    "source_basis": "Aggregated industry ranges (HomeAdvisor, Fixr, Angi, RSMeans-style baselines). Treat as planning estimates, not bids.",
+    "notes": "national_avg_total is for the default_size_sqft installation at Mid-Range finish in an average-cost market (CCI=1.00). Scale with size_scaling.exponent and apply finish + regional multipliers. Prices are automatically escalated by annual_escalation for every year after vintage_year, so estimates stay roughly current without manual edits; refresh the baselines themselves when they drift more than ~10%."
+  },
+  "inground_pool": {
+    "display_name": "In-Ground Pool",
+    "default_size_sqft": 512,
+    "national_avg_total": 57500,
+    "size_scaling": {
+      "exponent": 0.85,
+      "ref_sqft": 512
+    },
+    "materials_share": 0.45,
+    "labor_share": 0.4,
+    "permits_share": 0.05,
+    "contingency_share": 0.1,
+    "materials_items": [
+      {
+        "item": "Pool shell (gunite / vinyl / fiberglass)",
+        "share": 0.35,
+        "unit": "lot"
+      },
+      {
+        "item": "Plumbing & filtration system",
+        "share": 0.18,
+        "unit": "lot"
+      },
+      {
+        "item": "Electrical, lighting & bonding",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Coping & waterline tile",
+        "share": 0.12,
+        "unit": "lot"
+      },
+      {
+        "item": "Decking material (concrete/pavers)",
+        "share": 0.15,
+        "unit": "lot"
+      },
+      {
+        "item": "Fittings, chemicals & startup kit",
+        "share": 0.1,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Excavation & grading",
+        "trade": "Excavator operator",
+        "share": 0.15,
+        "days": 2
+      },
+      {
+        "phase": "Steel & forms",
+        "trade": "Pool framer",
+        "share": 0.12,
+        "days": 2
+      },
+      {
+        "phase": "Plumbing rough-in",
+        "trade": "Plumber",
+        "share": 0.1,
+        "days": 2
+      },
+      {
+        "phase": "Electrical rough-in",
+        "trade": "Electrician",
+        "share": 0.1,
+        "days": 1
+      },
+      {
+        "phase": "Shell pour (gunite/liner set)",
+        "trade": "Pool shotcrete crew",
+        "share": 0.15,
+        "days": 1
+      },
+      {
+        "phase": "Tile & coping",
+        "trade": "Mason / tile setter",
+        "share": 0.12,
+        "days": 3
+      },
+      {
+        "phase": "Decking install",
+        "trade": "Concrete crew",
+        "share": 0.15,
+        "days": 2
+      },
+      {
+        "phase": "Finishing & startup",
+        "trade": "Pool technician",
+        "share": 0.11,
+        "days": 2
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.8,
+      "Mid-Range": 1.0,
+      "Premium": 1.35,
+      "Luxury": 1.85
+    }
+  },
+  "above_ground_pool": {
+    "display_name": "Above-Ground Pool",
+    "default_size_sqft": 314,
+    "national_avg_total": 4800,
+    "size_scaling": {
+      "exponent": 0.7,
+      "ref_sqft": 314
+    },
+    "materials_share": 0.65,
+    "labor_share": 0.2,
+    "permits_share": 0.05,
+    "contingency_share": 0.1,
+    "materials_items": [
+      {
+        "item": "Pool kit (frame, wall, liner)",
+        "share": 0.65,
+        "unit": "ea"
+      },
+      {
+        "item": "Pump & filter",
+        "share": 0.15,
+        "unit": "ea"
+      },
+      {
+        "item": "Ladder / safety",
+        "share": 0.05,
+        "unit": "ea"
+      },
+      {
+        "item": "Sand / base material",
+        "share": 0.08,
+        "unit": "ton"
+      },
+      {
+        "item": "Chemicals & startup",
+        "share": 0.07,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Site leveling",
+        "trade": "General laborer",
+        "share": 0.3,
+        "days": 1
+      },
+      {
+        "phase": "Pool assembly",
+        "trade": "Pool installer",
+        "share": 0.5,
+        "days": 1
+      },
+      {
+        "phase": "Electrical hookup",
+        "trade": "Electrician",
+        "share": 0.2,
+        "days": 1
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.8,
+      "Mid-Range": 1.0,
+      "Premium": 1.4,
+      "Luxury": 2.0
+    }
+  },
+  "adu": {
+    "display_name": "Accessory Dwelling Unit (ADU)",
+    "default_size_sqft": 600,
+    "national_avg_total": 282000,
+    "size_scaling": {
+      "exponent": 0.9,
+      "ref_sqft": 600
+    },
+    "materials_share": 0.4,
+    "labor_share": 0.45,
+    "permits_share": 0.07,
+    "contingency_share": 0.08,
+    "materials_items": [
+      {
+        "item": "Foundation (concrete, rebar)",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Framing lumber & sheathing",
+        "share": 0.15,
+        "unit": "lot"
+      },
+      {
+        "item": "Roofing",
+        "share": 0.07,
+        "unit": "lot"
+      },
+      {
+        "item": "Exterior siding & windows",
+        "share": 0.12,
+        "unit": "lot"
+      },
+      {
+        "item": "Insulation & drywall",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "Plumbing fixtures & rough",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Electrical fixtures & rough",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "HVAC",
+        "share": 0.07,
+        "unit": "lot"
+      },
+      {
+        "item": "Flooring",
+        "share": 0.07,
+        "unit": "lot"
+      },
+      {
+        "item": "Kitchen & bath cabinetry/counters",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Appliances & finishes",
+        "share": 0.06,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Site prep & excavation",
+        "trade": "Excavator",
+        "share": 0.05,
+        "days": 3
+      },
+      {
+        "phase": "Foundation",
+        "trade": "Concrete crew",
+        "share": 0.08,
+        "days": 5
+      },
+      {
+        "phase": "Framing",
+        "trade": "Framing crew",
+        "share": 0.15,
+        "days": 10
+      },
+      {
+        "phase": "Roofing",
+        "trade": "Roofer",
+        "share": 0.06,
+        "days": 3
+      },
+      {
+        "phase": "Plumbing rough-in",
+        "trade": "Plumber",
+        "share": 0.08,
+        "days": 4
+      },
+      {
+        "phase": "Electrical rough-in",
+        "trade": "Electrician",
+        "share": 0.08,
+        "days": 4
+      },
+      {
+        "phase": "HVAC install",
+        "trade": "HVAC tech",
+        "share": 0.06,
+        "days": 3
+      },
+      {
+        "phase": "Insulation & drywall",
+        "trade": "Drywall crew",
+        "share": 0.08,
+        "days": 5
+      },
+      {
+        "phase": "Interior finish & paint",
+        "trade": "Finish carpenter / painter",
+        "share": 0.12,
+        "days": 10
+      },
+      {
+        "phase": "Cabinetry & counters",
+        "trade": "Cabinet installer",
+        "share": 0.07,
+        "days": 4
+      },
+      {
+        "phase": "Flooring",
+        "trade": "Flooring installer",
+        "share": 0.05,
+        "days": 3
+      },
+      {
+        "phase": "Final fixtures & punch list",
+        "trade": "GC / multiple",
+        "share": 0.12,
+        "days": 7
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.85,
+      "Mid-Range": 1.0,
+      "Premium": 1.3,
+      "Luxury": 1.75
+    }
+  },
+  "detached_garage": {
+    "display_name": "Detached Garage",
+    "default_size_sqft": 400,
+    "national_avg_total": 37000,
+    "size_scaling": {
+      "exponent": 0.85,
+      "ref_sqft": 400
+    },
+    "materials_share": 0.5,
+    "labor_share": 0.35,
+    "permits_share": 0.05,
+    "contingency_share": 0.1,
+    "materials_items": [
+      {
+        "item": "Concrete slab & footings",
+        "share": 0.18,
+        "unit": "lot"
+      },
+      {
+        "item": "Framing lumber & sheathing",
+        "share": 0.22,
+        "unit": "lot"
+      },
+      {
+        "item": "Roofing",
+        "share": 0.12,
+        "unit": "lot"
+      },
+      {
+        "item": "Siding & trim",
+        "share": 0.14,
+        "unit": "lot"
+      },
+      {
+        "item": "Garage door & opener",
+        "share": 0.12,
+        "unit": "ea"
+      },
+      {
+        "item": "Electrical materials",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "Windows & service door",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "Fasteners, insulation, misc",
+        "share": 0.06,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Site prep & slab",
+        "trade": "Concrete crew",
+        "share": 0.2,
+        "days": 3
+      },
+      {
+        "phase": "Framing",
+        "trade": "Framer",
+        "share": 0.25,
+        "days": 4
+      },
+      {
+        "phase": "Roofing",
+        "trade": "Roofer",
+        "share": 0.12,
+        "days": 2
+      },
+      {
+        "phase": "Siding & exterior",
+        "trade": "Siding crew",
+        "share": 0.15,
+        "days": 3
+      },
+      {
+        "phase": "Electrical",
+        "trade": "Electrician",
+        "share": 0.13,
+        "days": 2
+      },
+      {
+        "phase": "Doors & finish",
+        "trade": "Finish carpenter",
+        "share": 0.15,
+        "days": 2
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.85,
+      "Mid-Range": 1.0,
+      "Premium": 1.25,
+      "Luxury": 1.6
+    }
+  },
+  "shed": {
+    "display_name": "Storage Shed",
+    "default_size_sqft": 100,
+    "national_avg_total": 4200,
+    "size_scaling": {
+      "exponent": 0.8,
+      "ref_sqft": 100
+    },
+    "materials_share": 0.65,
+    "labor_share": 0.25,
+    "permits_share": 0.03,
+    "contingency_share": 0.07,
+    "materials_items": [
+      {
+        "item": "Shed kit or panels",
+        "share": 0.55,
+        "unit": "ea"
+      },
+      {
+        "item": "Foundation blocks / gravel",
+        "share": 0.15,
+        "unit": "lot"
+      },
+      {
+        "item": "Roofing material",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Hardware & paint",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Floor decking",
+        "share": 0.1,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Site prep",
+        "trade": "Laborer",
+        "share": 0.3,
+        "days": 1
+      },
+      {
+        "phase": "Foundation pad",
+        "trade": "Laborer",
+        "share": 0.2,
+        "days": 1
+      },
+      {
+        "phase": "Assembly",
+        "trade": "Carpenter",
+        "share": 0.5,
+        "days": 2
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.8,
+      "Mid-Range": 1.0,
+      "Premium": 1.4,
+      "Luxury": 2.0
+    }
+  },
+  "sports_court": {
+    "display_name": "Sport Court (half-court basketball / pickleball)",
+    "default_size_sqft": 1500,
+    "national_avg_total": 31500,
+    "size_scaling": {
+      "exponent": 0.9,
+      "ref_sqft": 1500
+    },
+    "materials_share": 0.5,
+    "labor_share": 0.35,
+    "permits_share": 0.05,
+    "contingency_share": 0.1,
+    "materials_items": [
+      {
+        "item": "Asphalt or concrete base",
+        "share": 0.4,
+        "unit": "sqft"
+      },
+      {
+        "item": "Court surface (acrylic / tile)",
+        "share": 0.25,
+        "unit": "sqft"
+      },
+      {
+        "item": "Hoop / net systems",
+        "share": 0.1,
+        "unit": "ea"
+      },
+      {
+        "item": "Fencing",
+        "share": 0.15,
+        "unit": "lf"
+      },
+      {
+        "item": "Lighting (optional)",
+        "share": 0.1,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Site prep & excavation",
+        "trade": "Excavator",
+        "share": 0.25,
+        "days": 2
+      },
+      {
+        "phase": "Base install",
+        "trade": "Paving crew",
+        "share": 0.3,
+        "days": 2
+      },
+      {
+        "phase": "Surfacing & striping",
+        "trade": "Court surfacer",
+        "share": 0.25,
+        "days": 3
+      },
+      {
+        "phase": "Equipment & fence",
+        "trade": "Installer",
+        "share": 0.2,
+        "days": 2
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.85,
+      "Mid-Range": 1.0,
+      "Premium": 1.3,
+      "Luxury": 1.7
+    }
+  },
+  "addition": {
+    "display_name": "Home Addition",
+    "default_size_sqft": 250,
+    "national_avg_total": 79000,
+    "size_scaling": {
+      "exponent": 0.95,
+      "ref_sqft": 250
+    },
+    "materials_share": 0.4,
+    "labor_share": 0.45,
+    "permits_share": 0.05,
+    "contingency_share": 0.1,
+    "materials_items": [
+      {
+        "item": "Foundation extension",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Framing lumber & sheathing",
+        "share": 0.18,
+        "unit": "lot"
+      },
+      {
+        "item": "Roofing tie-in",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "Siding & windows",
+        "share": 0.14,
+        "unit": "lot"
+      },
+      {
+        "item": "Insulation & drywall",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Electrical extension",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "HVAC extension",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "Plumbing (if wet room)",
+        "share": 0.08,
+        "unit": "lot"
+      },
+      {
+        "item": "Flooring & finishes",
+        "share": 0.1,
+        "unit": "lot"
+      },
+      {
+        "item": "Paint & trim",
+        "share": 0.06,
+        "unit": "lot"
+      }
+    ],
+    "labor_phases": [
+      {
+        "phase": "Demo & site prep",
+        "trade": "GC crew",
+        "share": 0.07,
+        "days": 2
+      },
+      {
+        "phase": "Foundation",
+        "trade": "Concrete crew",
+        "share": 0.1,
+        "days": 3
+      },
+      {
+        "phase": "Framing & tie-in",
+        "trade": "Framer",
+        "share": 0.2,
+        "days": 6
+      },
+      {
+        "phase": "Roofing tie-in",
+        "trade": "Roofer",
+        "share": 0.07,
+        "days": 2
+      },
+      {
+        "phase": "MEP rough-ins",
+        "trade": "Plumber/electrician/HVAC",
+        "share": 0.18,
+        "days": 5
+      },
+      {
+        "phase": "Insulation & drywall",
+        "trade": "Drywall crew",
+        "share": 0.1,
+        "days": 4
+      },
+      {
+        "phase": "Finish carpentry & paint",
+        "trade": "Finish carpenter / painter",
+        "share": 0.15,
+        "days": 6
+      },
+      {
+        "phase": "Flooring & fixtures",
+        "trade": "Multiple",
+        "share": 0.13,
+        "days": 4
+      }
+    ],
+    "finish_multipliers": {
+      "Basic": 0.85,
+      "Mid-Range": 1.0,
+      "Premium": 1.3,
+      "Luxury": 1.7
+    }
+  }
+}

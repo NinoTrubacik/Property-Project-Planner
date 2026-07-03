@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "description": "State-level construction Cost Index approximations (1.00 = US average). Loosely derived from RSMeans CCI / ENR city cost trends; coarse — metro-level variation is large.",
+    "vintage": "2024-2025",
+    "union_premium_states": ["NY", "NJ", "IL", "CA", "WA", "MA", "MN", "MI", "PA", "OH"]
+  },
+  "states": {
+    "AL": 0.88, "AZ": 0.96, "AR": 0.85, "CA": 1.28, "CO": 1.05, "CT": 1.18,
+    "DE": 1.02, "FL": 0.98, "GA": 0.94, "ID": 0.95, "IL": 1.12, "IN": 0.97,
+    "IA": 0.94, "KS": 0.92, "KY": 0.92, "LA": 0.90, "ME": 1.00, "MD": 1.08,
+    "MA": 1.22, "MI": 1.05, "MN": 1.08, "MS": 0.85, "MO": 0.96, "MT": 0.93,
+    "NE": 0.93, "NV": 1.02, "NH": 1.02, "NJ": 1.20, "NM": 0.92, "NY": 1.30,
+    "NC": 0.93, "ND": 0.95, "OH": 1.02, "OK": 0.88, "OR": 1.08, "PA": 1.05,
+    "RI": 1.12, "SC": 0.90, "SD": 0.90, "TN": 0.92, "TX": 0.96, "UT": 0.98,
+    "VT": 1.00, "VA": 1.00, "WA": 1.18, "WV": 0.92, "WI": 1.02, "WY": 0.92,
+    "DC": 1.25
+  },
+  "metro_overrides": {
+    "94": 1.45, "95": 1.40, "100": 1.45, "101": 1.45, "102": 1.45, "104": 1.40,
+    "112": 1.40, "113": 1.40, "117": 1.35, "981": 1.30, "021": 1.32, "024": 1.28,
+    "606": 1.25, "200": 1.30, "200E": 1.30
+  }
+}

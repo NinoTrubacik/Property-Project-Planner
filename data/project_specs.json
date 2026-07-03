@@ -1,0 +1,97 @@
+{
+  "_meta": {
+    "description": "Generic clearance & setback rules per project type. Local zoning supersedes — these are conservative defaults for feasibility screening only."
+  },
+  "inground_pool": {
+    "min_usable_yard_sqft": 350,
+    "min_side_clearance_ft": 5,
+    "min_rear_setback_ft": 10,
+    "min_distance_from_house_ft": 10,
+    "min_equipment_access_width_ft": 8,
+    "typical_permits": ["Building permit", "Electrical permit", "Plumbing permit", "Barrier/fence inspection"],
+    "common_risks": [
+      "Septic field within 25ft",
+      "Buried utilities (call 811 before digging)",
+      "Overhead power lines within 25ft horizontal of pool",
+      "Slope > 5% in pool area (requires retaining)",
+      "Heritage / mature trees within 15ft (root + drop risk)"
+    ]
+  },
+  "above_ground_pool": {
+    "min_usable_yard_sqft": 200,
+    "min_side_clearance_ft": 3,
+    "min_rear_setback_ft": 5,
+    "min_distance_from_house_ft": 4,
+    "min_equipment_access_width_ft": 4,
+    "typical_permits": ["Often permit-exempt under 24in deep — check local code", "Electrical for pump", "Barrier code may still apply"],
+    "common_risks": [
+      "Uneven ground (must be level to within 1in across diameter)",
+      "Overhead power lines",
+      "Tree drop / debris"
+    ]
+  },
+  "adu": {
+    "min_usable_yard_sqft": 1000,
+    "min_side_clearance_ft": 4,
+    "min_rear_setback_ft": 4,
+    "min_distance_from_house_ft": 4,
+    "min_equipment_access_width_ft": 10,
+    "typical_permits": ["Building permit", "Zoning approval", "Sewer/water tap fees", "Electrical service upgrade likely"],
+    "common_risks": [
+      "Lot coverage cap (often 35–50%)",
+      "HOA restrictions on ADUs",
+      "Sewer capacity / new lateral required",
+      "Off-street parking requirement",
+      "Required separate utility meters"
+    ]
+  },
+  "detached_garage": {
+    "min_usable_yard_sqft": 600,
+    "min_side_clearance_ft": 3,
+    "min_rear_setback_ft": 3,
+    "min_distance_from_house_ft": 6,
+    "min_equipment_access_width_ft": 10,
+    "typical_permits": ["Building permit", "Electrical permit"],
+    "common_risks": [
+      "Lot coverage cap",
+      "Driveway approach permit if curb cut needed",
+      "Stormwater impact"
+    ]
+  },
+  "shed": {
+    "min_usable_yard_sqft": 150,
+    "min_side_clearance_ft": 3,
+    "min_rear_setback_ft": 3,
+    "min_distance_from_house_ft": 3,
+    "min_equipment_access_width_ft": 3,
+    "typical_permits": ["Often permit-exempt under 120–200 sqft — verify local code"],
+    "common_risks": ["HOA aesthetic rules", "Easement encroachment"]
+  },
+  "sports_court": {
+    "min_usable_yard_sqft": 2000,
+    "min_side_clearance_ft": 5,
+    "min_rear_setback_ft": 10,
+    "min_distance_from_house_ft": 10,
+    "min_equipment_access_width_ft": 10,
+    "typical_permits": ["Building/site permit", "Fence permit if > local height limit", "Lighting if installed"],
+    "common_risks": [
+      "Drainage on impervious surface",
+      "Noise ordinance (especially with lighting)",
+      "HOA restrictions on outdoor lighting / fence height"
+    ]
+  },
+  "addition": {
+    "min_usable_yard_sqft": 250,
+    "min_side_clearance_ft": 5,
+    "min_rear_setback_ft": 10,
+    "min_distance_from_house_ft": 0,
+    "min_equipment_access_width_ft": 6,
+    "typical_permits": ["Building permit", "Electrical / plumbing / HVAC as scoped", "Energy code compliance"],
+    "common_risks": [
+      "Existing foundation tie-in",
+      "Lot coverage cap",
+      "Setback encroachment",
+      "Tree protection ordinances"
+    ]
+  }
+}

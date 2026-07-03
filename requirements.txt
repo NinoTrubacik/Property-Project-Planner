@@ -1,0 +1,5 @@
+streamlit>=1.32
+requests>=2.31
+shapely>=2.0
+pyproj>=3.6
+pillow>=10.0

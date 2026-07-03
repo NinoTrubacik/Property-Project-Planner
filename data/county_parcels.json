@@ -1,0 +1,95 @@
+{
+  "_meta": {
+    "description": "Per-county ArcGIS parcel REST endpoints. When a geocoded address falls in a covered county, we query that county's authoritative parcel service for the exact polygon — gives true lot square footage instead of OSM guesses.",
+    "how_to_add": "Find your county's parcel ArcGIS REST service URL (usually published by the county GIS or assessor), verify it with a live point query, then add an entry below. The pipeline uses it automatically when an address falls in that county's state + ZIP-prefix set. Geometry is requested in WGS84 (EPSG:4326) so we compute area ourselves — no need to know the service's spatial reference.",
+    "ordering": "Counties are tried in list order when ZIP prefixes overlap (e.g. St. Louis City before St. Louis County — both claim 631xx). Put the more specific jurisdiction first.",
+    "verified": "Every entry below was live-verified with a real point/envelope query on 2026-07-03.",
+    "spatial_rel": "Endpoints must support point-in-polygon via geometryType=esriGeometryPoint + spatialRel=esriSpatialRelIntersects, and envelope queries via esriGeometryEnvelope."
+  },
+  "counties": [
+    {
+      "name": "St. Louis City, MO",
+      "state": "MO",
+      "zip_prefixes": ["631"],
+      "query_url": "https://maps8.stlouis-mo.gov/arcgis/rest/services/ASSESSOR/Assessor_Public_Parcels/MapServer/11/query",
+      "id_field": "ParcelId",
+      "situs_address_field": "SITEADDR",
+      "situs_housenumber_field": "LowAddrNum"
+    },
+    {
+      "name": "St. Louis County, MO",
+      "state": "MO",
+      "zip_prefixes": ["630", "631"],
+      "query_url": "https://maps.stlouisco.com/hosting/rest/services/Maps/AGS_Parcels/MapServer/0/query",
+      "id_field": "LOCATOR",
+      "situs_address_field": "PROP_ADD",
+      "situs_housenumber_field": "PROP_ADRNUM"
+    },
+    {
+      "name": "Kansas City, MO",
+      "state": "MO",
+      "zip_prefixes": ["640", "641"],
+      "query_url": "https://mapd.kcmo.org/kcgis/rest/services/AGOL/MapServer/6/query",
+      "id_field": "APN",
+      "situs_address_field": "ADDRESS",
+      "situs_housenumber_field": "ADDR"
+    },
+    {
+      "name": "Los Angeles County, CA",
+      "state": "CA",
+      "zip_prefixes": ["900", "901", "902", "903", "904", "905", "906", "907",
+                       "908", "910", "911", "912", "913", "914", "915", "916",
+                       "917", "918", "919", "923", "925", "927", "930", "931",
+                       "932", "934", "935"],
+      "query_url": "https://public.gis.lacounty.gov/public/rest/services/LACounty_Cache/LACounty_Parcel/MapServer/0/query",
+      "id_field": "AIN",
+      "situs_address_field": "SitusFullAddress",
+      "situs_housenumber_field": "SitusHouseNo"
+    },
+    {
+      "name": "Harris County, TX",
+      "state": "TX",
+      "zip_prefixes": ["770", "772", "773", "774", "775"],
+      "query_url": "https://www.gis.hctx.net/arcgis/rest/services/HCAD/Parcels/MapServer/0/query",
+      "id_field": "HCAD_NUM",
+      "situs_address_field": "",
+      "situs_housenumber_field": "site_str_num"
+    },
+    {
+      "name": "King County, WA",
+      "state": "WA",
+      "zip_prefixes": ["980", "981"],
+      "query_url": "https://gismaps.kingcounty.gov/arcgis/rest/services/Property/KingCo_Parcels/MapServer/0/query",
+      "id_field": "PIN",
+      "situs_address_field": "",
+      "situs_housenumber_field": ""
+    },
+    {
+      "name": "Miami-Dade County, FL",
+      "state": "FL",
+      "zip_prefixes": ["330", "331", "332", "333"],
+      "query_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_LandInformation/MapServer/26/query",
+      "id_field": "FOLIO",
+      "situs_address_field": "TRUE_SITE_ADDR",
+      "situs_housenumber_field": ""
+    },
+    {
+      "name": "Wake County, NC",
+      "state": "NC",
+      "zip_prefixes": ["275", "276"],
+      "query_url": "https://maps.wake.gov/arcgis/rest/services/Property/Parcels/MapServer/0/query",
+      "id_field": "PIN_NUM",
+      "situs_address_field": "SITE_ADDRESS",
+      "situs_housenumber_field": "STNUM"
+    },
+    {
+      "name": "Mecklenburg County, NC",
+      "state": "NC",
+      "zip_prefixes": ["280", "281", "282"],
+      "query_url": "https://meckgis.mecklenburgcountync.gov/server/rest/services/TaxParcelBoundaries/MapServer/0/query",
+      "id_field": "pid",
+      "situs_address_field": "",
+      "situs_housenumber_field": ""
+    }
+  ]
+}

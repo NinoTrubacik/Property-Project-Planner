@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Local build artifact — not needed to run or deploy
+vibe-property-analyzer.zip
+
+# Editor / tooling
+.claude/
+scratchpad/
