@@ -4,12 +4,18 @@ Mainland US (lower 48) only. Refuses analysis on government / restricted sites.
 """
 from __future__ import annotations
 
+import os
+
 import streamlit as st
 
 from src import costs as costs_mod
 from src.report import run_pipeline, validate_address
 
-st.set_page_config(page_title="Property Project Planner", layout="wide")
+st.set_page_config(
+    page_title="Property Project Planner",
+    page_icon=os.path.join(os.path.dirname(__file__), "favicon.png"),
+    layout="wide",
+)
 
 PROJECTS = costs_mod.list_projects()
 FINISHES = ["Basic", "Mid-Range", "Premium", "Luxury"]
